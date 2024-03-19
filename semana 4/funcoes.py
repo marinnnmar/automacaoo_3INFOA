@@ -30,3 +30,5 @@ altura = float(input("Digite a altura: "))
 area2 = calculateTriangleArea(base,altura)
 print("A área do triângulo 2 é ", area2)
 '''
+
+
