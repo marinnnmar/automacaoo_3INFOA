@@ -1,11 +1,25 @@
 import pyautogui
 
+def obterEstadoCenario():
+    if pyautogui.pixelMatchesColor(100,600,[255,255,255],50):
+        return 'DIA'
+    else:
+        return 'NOITE'
+
 #clica no chrome
-pyautogui.click(200, 325, duration=.5)
+pyautogui.click(200, 422, duration=.5)
 pyautogui.keyDown('space')
 
 #pressionar espaço                                   
-while True: 
-    #print(pyautogui.pixel(200, 422))             
-    if not pyautogui.pixelMatchesColor(200, 325, [255,255,255], tolerance=.1):
-        pyautogui.keyDown('space')
+while True:
+
+    #pega a cor do dino
+    #corDino = pyautogui.pixel(70,438)
+
+    if obterEstadoCenario() == 'DIA':
+        if pyautogui.pixelMatchesColor(235, 439, [83,83,83], 50):
+            print(pyautogui.pixel(235,439))
+            pyautogui.keyDown('space')
+    else:
+        if pyautogui.pixelMatchesColor(235, 439, [172,172,172], 50):
+            pyautogui.keyDown('space')
