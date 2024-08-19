@@ -1,7 +1,7 @@
 import pyautogui
 
 #Atleta
-cAtleta = pyautogui.locateCenterOnScreen('atleta.png', grayscale=True, confidence=0.8) #localizar
+cAtleta = pyautogui.locateCenterOnScreen('atleta.png', grayscale=True, confidence=0.7) #localizar
 pyautogui.click(cAtleta, duration=0.8) #clicar
 pyautogui.write('Novo Atleta') #digitar
 
@@ -23,3 +23,10 @@ pyautogui.write('Brasil')
 #Enviar
 cEnviar = pyautogui.locateCenterOnScreen('salvar.png', grayscale=True, confidence=0.8)
 pyautogui.click(cEnviar, duration=0.8)
+
+
+
+
+#Enviar novamente
+cEnviarNovamente = pyautogui.locateCenterOnScreen('enviar_novamente.png', grayscale=True, confidence=0.8)
+pyautogui.click(cEnviarNovamente, duration=0.8)
